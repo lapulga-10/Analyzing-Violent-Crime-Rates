@@ -41,39 +41,28 @@ sink("Results/model_comparison/loo.comp.us.state.txt")
 sink("Results/model_comparison/loo.comp.cali.txt")
 (loo.comp.cali <- loo_compare(loo.cs, loo.gp))
 
-# excluding zoi5
-sink("Results/model_comparison/pmp.state.txt")
-(pmp.state <- loo_model_weights(list(loo.pool5, loo.pool10, loo.hier5 
-                                     #, loo.poolzoi5
-                                     ), 
-                                method = "stacking"))
+# # excluding zoi5
+# sink("Results/model_comparison/pmp.state.txt")
+# (pmp.state <- loo_model_weights(list(loo.pool5, loo.pool10, loo.hier5 
+#                                      #, loo.poolzoi5
+#                                      ), 
+#                                 method = "stacking"))
 
 sink("Results/model_comparison/pmp.pool5v10.txt")
 (pmp.pool5v10 <- loo_model_weights(list(loo.pool5, loo.pool10), 
                                 method = "stacking"))
 
-
 sink("Results/model_comparison/pmp.pool5vhier.txt")
 (pmp.pool5v10 <- loo_model_weights(list(loo.pool5, loo.hier5), 
                                    method = "stacking"))
-
-
 
 sink("Results/model_comparison/pmp.cali.txt")
 (pmp.cali <-loo_model_weights(list(loo.cs, loo.gp), 
                               method = "stacking"))
 
-
 sink()
 
 
-
-library(bridgesampling)
-
-log.m.pool5 <- bridge_sampler(pooled_model5)
-log.m.pool10 <- bridge_sampler(pooled_model10)
-log.m.poolzoi5 <- bridge_sampler(zoi_model_5)
-log.m.hier5 <- bridge_sampler(hierarchical_model)
 
 
 

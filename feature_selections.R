@@ -2,7 +2,7 @@ library(ggcorrplot)
 library(caret)
 library(randomForest)
 library(gam)
-library(lattice)
+
 
 cor_matrix <- cor(data)
 ggcorrplot(cor_matrix)

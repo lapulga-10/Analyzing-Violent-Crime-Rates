@@ -84,3 +84,14 @@ Selected predictors include: - **`PctKids2Par`**: Percentage of children in two-
 4.  **Recorded crimes**
 
     -   Not all types of crime are recorded in dataset
+
+
+
+*Summary*
+- Developed and compared pooled, hierarchical, and spatial Bayesian models using brms and Stan to analyze violent crime across 1,900+ U.S. communities.
+
+- Improved in-sample predictive performance by 18% and out-of-sample accuracy by 12.5% by modeling state-level variation, reducing underfitting and bias in U.S. communities.
+
+- Improved spatial prediction in California by implementing Gaussian process models that outperformed cubic splines, boosting in-sample predictive performance by 29.5% and out-of-sample accuracy by 20%.
+
+- Validated models through ELPD, posterior predictive checks, residual diagnostics, and MCMC convergence, ensuring statistical robustness and interpretability.
